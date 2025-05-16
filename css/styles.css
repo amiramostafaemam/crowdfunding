@@ -1,0 +1,513 @@
+/* .btn-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-accent);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-accent);
+    color: white;
+} */
+
+/* تقسيم الأقسام */
+/* .container {
+    width: 80%;
+    margin: 0 auto;
+
+/* ربط المتغيرات والخطوط */
+@import url('variables.css');
+@import url('fonts.css');
+
+/* إعدادات الخطوط */
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    background-color: var(--background-color);
+    color: #363d38;
+    transition: background-color 0.5s ease;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: #a7b3ab;
+    line-height: 1.3;
+    font-weight: 700;
+    font-size: var(--font-size-subheading);
+    transition: color 0.3s ease;
+}
+
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+#hero-img {
+    width: 100%;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideIn 1s forwards 0.5s;
+}
+
+.fundraising:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.fundraising__progress--container {
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+
+.outer {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.20);
+}
+
+.inner {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 6px -1px rgba(255, 255, 255, 0.20),
+        -0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+        0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+/* دائرة التقدم */
+circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    /* طول الدائرة */
+    stroke-dashoffset: 472;
+    /* البداية من 0 */
+    transition: stroke-dashoffset 2s ease-in-out;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* أنيميشن لظهور شريط التقدم */
+@keyframes progressBar {
+    from {
+        stroke-dashoffset: 472;
+        /* البداية من 0 */
+    }
+
+    to {
+        stroke-dashoffset: 164;
+        /* 65% من 472 */
+    }
+}
+
+/* تفعيل الأنيميشن على دائرة التقدم */
+.fundraising__progress--container svg circle {
+    animation: progressBar 2s ease-out forwards;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.fundraising {
+    background-color: var(--card-primary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.donate__now {
+    background-color: var(--btn-primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    margin: 1em auto 2em;
+    font-family: var(--font-heading);
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    border-color: transparent;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 1.5s;
+    align-self: center;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+    /* تأكد من أن الزر في المنتصف */
+}
+
+.donate__now:hover {
+    background-color: var(--btn-secondary-color);
+    transform: scale(1.05);
+}
+/* 
+hr {
+    border: 0;
+    border-top: 3px solid darkgreen;
+    margin: 1rem 0;
+} */
+
+.donation__states {
+    text-align: left;
+}
+
+.donation__states h4,
+.donation__states p {
+    margin-bottom: 0.5rem;
+}
+
+.donation__states h4,
+.donation__states p {
+    transition: color 0.3s ease, transform 0.4s ease;
+}
+
+circle {
+    transition: stroke-dashoffset 1s ease;
+}
+
+#percentage {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--color-accent);
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.inner {
+    animation: popIn 2.5s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes popIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#percentage:hover {
+    transform: scale(1.1);
+    color: var(--color-primary);
+}
+
+.fundraising__progress {
+    display: flex;
+    align-items: center;
+    /* يوسط العناصر رأسيًا */
+    gap: 2rem;
+}
+
+@keyframes fadeZoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+#hero-img {
+    animation: fadeZoomIn 1s ease-out forwards;
+    cursor: pointer;
+}
+figure{
+    transition: transform 0.5s ease;
+}
+figure:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px transparent;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.donation__states>div {
+    animation: fadeUp 0.8s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.3s;
+}
+
+.donation__states .current {
+    animation-delay: 1.1s;
+}
+
+.donation__states .target {
+    animation-delay: 1.3s;
+}
+
+.donation__states .backers {
+    animation-delay: 1.5s;
+}
+
+.donation__states h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 0.3rem;
+    opacity: 0.6;
+}
+
+.donation__states p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.donation__states hr {
+    border: none;
+    height: 5px;
+    background-color: var(--color-background);
+    border-radius: 4px;
+    margin: 0.5rem 0;
+    transition: all 0.5s ease;
+}
+
+
+@keyframes progressBar {
+    from {
+        stroke-dashoffset: 472;
+    }
+
+    to {
+        stroke-dashoffset: 164;
+    }
+}
+
+.fundraising__progress--container svg circle {
+    animation: progressBar 2s ease-out forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+hr{
+    opacity: 1;
+}
+
+/* باقي الكود السابق */
+
+/* ********************************************************************** */
+
+.gallery img{
+    width:100%;
+    height:auto;
+}
+.compaign__details--video .video {
+    max-width:80%;
+    /* width: 100%; */
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow:1px 4px 8px rgba(0, 0, 0, 0.15);
+    margin: 30px auto;
+    outline: none;
+}
+
+
+.gallery:hover{
+    opacity:0.5;
+    cursor: pointer;
+}
+
+.compaign__details--video,.compaign__details--gallery{
+    display: none;
+}
+
+.compaign__details--gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+/* ******************************************** */
+.register__btn{
+    background-color: var(--btn-primary-color);
+    color:white;
+}
+
+.register__btn:hover{
+    background-color: var(--btn-secondary-color);
+}
+
+/* Navbar fade-in animation */
+.nav-fade-in {
+    animation: fadeInDown 0.8s ease-out;
+    background-color: #fff;
+    /* Feel free to change */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Nav Links hover effect */
+.nav-link-hover {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link-hover::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #0d6efd;
+    /* Bootstrap primary */
+    transition: width 0.3s;
+}
+
+.nav-link-hover:hover::after {
+    width: 100%;
+}
+
+/* Register button styling */
+.register__btn {
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.register__btn:hover {
+    /* background-color: #0b5ed7; */
+    color: white;
+    transform: scale(1.05);
+}
+
+/* 00000000000000000000 */
+
+.footer {
+    background-color: var(--btn-secondary-color);
+    
+}
+
+.footer h5,
+.footer h4 {
+    color: #fff;
+}
+
+.footer ul li {
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer ul li:hover {
+    color: var(--card-third-color);
+}
+
+.footer__logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer ul li {
+    color: #a7b3ab;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer__about, .footer__copyrights{
+    color:#a7b3ab;
+}
+

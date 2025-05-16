@@ -1,0 +1,23 @@
+:root {
+    --font-primary: 'Poppins', sans-serif;
+    /* للنصوص العامة */
+    --font-heading: 'Montserrat', sans-serif;
+    /* للعناوين */
+
+    --font-size-base: 1rem;
+    /* 16px */
+    --font-size-heading: 2rem;
+    /* 32px */
+    --font-size-subheading: 1.25rem;
+    /* 20px */
+
+    --line-height-base: 1.6;
+
+    /* الألوان */
+    --background-color: #F1F7F0;
+        --card-third-color: #ECF3EB;
+        --card-primary-color: #cddcca;
+        --card-secondary-color: #8ea58c;
+        --btn-primary-color: #738A6E;
+        --btn-secondary-color: #344C3D;
+}

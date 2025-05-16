@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compaign Details</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/functions.js"></script>
+</head>
+
+<body>
+    <main class="container">
+        <section class="hero d-flex  align-items-center gap-5">
+            <figure>
+                <img id="hero-img" class="mt-5" src="assests/images/charity1.webp"
+                    alt="Supporting educational projects for children in underserved areas">
+            </figure>
+            <section class="fundraising mt-5 position-relative">
+                <section class="fundraising__progress d-flex ">
+                    <div class="fundraising__progress--container ms-5">
+                        <div class="outer">
+                            <div class="inner">
+                                <div id="percentage">
+                                    65%
+                                </div>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                            <defs>
+                                <linearGradient id="GradientColor">
+                                    <stop offset="0%" stop-color="#738A6E" />
+                                    <stop offset="40%" stop-color="#738A6E" />
+                                    <stop offset="70%" stop-color="#344C3D" />
+                                    <stop offset="100%" stop-color="#344C3D" />
+                                    <!-- <stop offset="0%" stop-color="#F3CA52" />
+                                    <stop offset="100%" stop-color="#F3CA52" /> -->
+                                </linearGradient>
+                            </defs>
+                            <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                        </svg>
+
+                    </div>
+
+                    <div class="donation__states p-5">
+                        <div class="current">
+                            <h4>Current</h4>
+                            <p>15,000$</p>
+                            <hr>
+                        </div>
+                        <div class="target">
+                            <h4>Target</h4>
+                            <p>20,000$</p>
+                            <hr>
+                        </div>
+                        <div class="backers">
+                            <h4>Backers</h4>
+                            <p>500</p>
+                        </div>
+                    </div>
+                </section>
+                <button class="donate__now ">Donate Now</button>
+
+            </section>
+
+        </section>
+
+
+        <section class="about__compaign">
+            <div class="compaign__details">
+                <div>
+                    <button class="btn tablinks" id="btn1">Description</button>
+                    <button class="btn tablinks" id="btn2">Video</button>
+                    <button class="btn tablinks" onclick="displayDetail(event,'gallery')">Gallery</button>
+                </div>
+                <div class="compaign__details--description tabcontent" id="description">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos magni sapiente quaerat, alias nemo cum sunt, natus voluptas nisi nulla impedit. Maiores recusandae architecto quasi magnam minima consectetur, officiis voluptatibus!
+                    Amet repellat ipsa laboriosam accusamus pariatur molestias laudantium obcaecati animi illum, ullam quis? Aliquid alias beatae, natus pariatur dignissimos quis eos unde mollitia excepturi incidunt voluptatibus fugit quibusdam dolore minima?</p>
+                </div>
+                <div class="compaign__details--video tabcontent" id="video">
+                    <video class="video" controls>
+                        <source src="assests/videos/charity-v1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="compaign__details--gallery tabcontent" id="gallery">
+                    <figure class="gallery"><img src="assests/images/charity2.webp" alt=""></figure>
+                    <figure class="gallery"><img src="assests/images/charity3.webp" alt=""></figure>
+                    <figure class="gallery"><img src="assests/images/charity4.webp" alt=""></figure>
+                    <figure class="gallery"><img src="assests/images/charity5.webp" alt=""></figure>
+                    <figure class="gallery"><img src="assests/images/charity6.webp" alt=""></figure>
+                    <figure class="gallery"><img src="assests/images/charity1.webp" alt=""></figure>
+                </div>
+                
+            </div>
+            
+        </section>
+    </main>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
