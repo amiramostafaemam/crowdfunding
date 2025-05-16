@@ -1,0 +1,185 @@
+:root {
+  /* Brand Colors */
+  --background-color: #f1f7f0;
+  --card-third-color: #ecf3eb;
+  --card-primary-color: #cddcca;
+  --card-secondary-color: #8ea58c;
+  --btn-primary-color: #738a6e;
+  --btn-secondary-color: #344c3d;
+  --section-padding: 3.3rem 0px;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color:var(--background-color);
+}
+.homepage__slider {
+  /* max-height: 50vh; */
+}
+.homepage__slider img {
+  height: 60vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.home__hero {
+  height: 60vh;
+}
+.home__slider__lyar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+.home__slider__lyar h1{
+  font-size: 4rem;
+}
+.home__slider__lyar p{
+  font-size: 1.1rem;
+}
+.home__slider__lyar div {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+.donate__now {
+  background-color: var(--btn-primary-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+
+  /* font-family: var(--font-heading); */
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  border-color: transparent;
+  text-transform: uppercase;
+}
+.donate__now:hover {
+  background-color: var(--btn-secondary-color);
+}
+.progress-bar{
+  background-color: var(--btn-secondary-color);
+}
+.progress,
+.progress-stacked {
+  --bs-progress-height: .5rem;
+}
+
+.home__explore__filter {
+  background-color: var(--btn-primary-color);
+}
+.explore-icon-wrapper {
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  position: relative;
+  /* overflow: hidden; */
+  transition: transform 0.3s ease;
+}
+.random__explore--section button{
+  background-color: var(--btn-primary-color);
+  color: var(--background-color);
+}
+.random__explore--section button:hover{
+background-color: var(--btn-secondary-color);
+color: var(--background-color);
+}
+
+.bubble {
+  position: absolute;
+
+  border-radius: 50%;
+
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.4s ease;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.bubble-1 {
+  width: 25px;
+  height: 25px;
+  top: 5px;
+  left: 5px;
+}
+
+.bubble-2 {
+  width: 15px;
+  height: 15px;
+  bottom: 5px;
+  right: 5px;
+}
+
+.explore-icon-wrapper:hover .bubble {
+  opacity: 1;
+  transform: scale(1);
+}
+.explore-icon-wrapper:hover {
+  transform: scale(0.8);
+}
+
+.home__explore__item1,
+.home__explore__item1 .bubble {
+  background-color: var(--btn-secondary-color);
+}
+.home__explore__item2,
+.home__explore__item2 .bubble {
+  background-color: #008996;
+}
+.home__explore__item3,
+.home__explore__item3 .bubble {
+  background-color: #f4c400;
+}
+.home__explore__item4,
+.home__explore__item4 .bubble {
+  background-color: #ee7624;
+}
+.home__explore__item5,
+.home__explore__item5 .bubble {
+  background-color: #3a5ea8;
+}
+.home__explore__item6,
+.home__explore__item6 .bubble {
+  background-color: #9d1e65;
+}
+.fundRaisers__section__numbers button{
+  background-color: var(--btn-primary-color);
+}
+.fundRaisers__section__numbers button:hover{
+  background-color: var(--btn-secondary-color);
+}
+ @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate {
+      animation: fadeUp 1s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.3s; }
+    .delay-2 { animation-delay: 0.6s; }
+    .delay-3 { animation-delay: 0.9s; }
+
+    .side-img {
+      width: 90px;
+      border-radius: 10px;
+      filter: grayscale(100%);
+    }
+
+    @media (max-width: 768px) {
+      .d-md-flex {
+        display: none !important;
+      }
+    }

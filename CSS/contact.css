@@ -1,0 +1,63 @@
+:root {
+  /* Brand Colors */
+  --background-color: #f1f7f0;
+  --card-third-color: #ecf3eb;
+  --card-primary-color: #cddcca;
+  --card-secondary-color: #8ea58c;
+  --btn-primary-color: #738a6e;
+  --btn-secondary-color: #344c3d;
+  --section-padding: 3.3rem 0px;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+.About__header__background {
+  background-image: url("../ASESETS/Images/homeless.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  height: 50vh !important;
+}
+.About__header__lyar{
+position: absolute;
+top:0;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: rgba(0, 0, 0, 0.5)
+
+}
+.contact-form{
+  background-color: var(--btn-primary-color);
+}
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--btn-secondary-color);
+  box-shadow: 0 0 0 0.3rem rgba(255, 193, 7, 0.25);
+}
+
+.contact-form h5 {
+  font-weight: bold;
+}
+.contact__li--margin {
+  margin-right: 1rem;
+}
+.contact-form button{
+  background-color: var(--btn-secondary-color);
+  color: white;
+}
+.contact-form button:hover{
+  background-color: var(--card-secondary-color);
+}

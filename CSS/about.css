@@ -1,0 +1,75 @@
+:root {
+  /* Brand Colors */
+  --background-color: #f1f7f0;
+  --card-third-color: #ecf3eb;
+  --card-primary-color: #cddcca;
+  --card-secondary-color: #8ea58c;
+  --btn-primary-color: #738a6e;
+  --btn-secondary-color: #344c3d;
+  --section-padding: 3.3rem 0px;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color:var(--background-color);
+}
+
+.About__header__background {
+  background-image: url("../ASESETS/Images/homeless.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+  /* background-attachment: fixed; */
+  height: 50vh !important;
+}
+.About__header__lyar{
+position: absolute;
+top:0;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: rgba(0, 0, 0, 0.5)
+
+
+}
+.about__img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.about__img-wrapper img {
+  transition: transform 0.4s ease;
+}
+
+.about__img-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.about__img-tag {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: var(--btn-primary-color);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.about__section {
+  padding: var(--section-padding);
+}
+.about__section h2 {
+  margin: 15px 0;
+}
+.about__heading{
+  color: var(--btn-primary-color);
+}
+.about__body__p{
+  color: var(--btn-secondary-color);
+}

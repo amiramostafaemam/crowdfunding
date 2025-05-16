@@ -1,0 +1,135 @@
+:root {
+  /* Brand Colors */
+  --background-color: #f1f7f0;
+  --card-third-color: #ecf3eb;
+  --card-primary-color: #cddcca;
+  --card-secondary-color: #8ea58c;
+  --btn-primary-color: #738a6e;
+  --btn-secondary-color: #344c3d;
+  --section-padding: 3.3rem 0px;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+.explore__input input{
+    
+    background-color: var( --background-color);
+    outline: none;
+   
+}
+.explore__header__background{
+    background-image: url("../ASESETS/Images/homeless.webp");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+     position: relative;
+
+  height: 50vh !important;
+}
+.About__header__lyar{
+position: absolute;
+top:0;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: rgba(0, 0, 0, 0.5)
+
+
+}
+.explore__card{
+    overflow: hidden;
+}
+.explore__card__layer{
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0 ,.2);
+    opacity: 0;
+    transition: opacity .3s ease;
+
+}
+.explore__card__layer:hover{
+    /* top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0 ,.5); */
+    opacity: 1;
+}
+.explore__body .explore__card--img {
+  transition: transform 0.3s ease; 
+}
+.explore__card:hover .explore__card--img {
+  transform: scale(1.1); 
+}
+.explore__body .progress{
+    height: 5px;
+}
+
+.explore__body .progress-bar{
+    height: 5px;
+    background-color: var(--btn-secondary-color);
+}
+.donate__now {
+    background-color: var(--btn-secondary-color);
+        color: white;
+        padding: 0.8rem 1.5rem;
+        
+        /* font-family: var(--font-heading); */
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        border-color:transparent ;
+        text-transform: uppercase;
+}
+
+
+.donate__now:hover {
+    background-color: var(--btn-primary-color);
+}
+
+.explore__filter{
+    padding: 50px 0;
+    overflow: hidden;
+}
+.explore__filter .explore__filter__ul li:hover{
+    border-bottom:2px solid #0A6847;
+}
+.explore__filter .explore__filter__ul .first__li{
+    margin-right: 3rem;
+}
+.explore__filter__ul {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  -webkit-overflow-scrolling: touch; 
+  
+  padding-bottom: 1rem; 
+   
+  scrollbar-width: none;
+}
+.explore__filter__ul li {
+  min-width: 100px;
+  flex: 0 0 auto;
+}
+
+.dropdown__filter__responsive{
+    display: none;
+    
+}
+
+@media screen and (max-width: 500px) {
+    .dropdown__filter__responsive {
+        /* display: block !important; */
+    }
+
+   .explore__filter__ul{
+    
+    justify-content: flex-start !important;
+}
+}
