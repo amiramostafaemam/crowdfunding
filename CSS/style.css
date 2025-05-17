@@ -61,6 +61,21 @@ body {
 .donate__now:hover {
   background-color: var(--btn-secondary-color);
 }
+.explore__card {
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.explore__card--img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.explore__card:hover .explore__card--img {
+  transform: scale(1.1);
+}
 .progress-bar{
   background-color: var(--btn-secondary-color);
 }
@@ -68,7 +83,14 @@ body {
 .progress-stacked {
   --bs-progress-height: .5rem;
 }
-
+.learnmore{
+    color: var(--btn-primary-color);
+    text-decoration: none;
+}
+.learnmore:hover{
+    color: var(--btn-secondary-color);
+    text-decoration: underline;
+}
 .home__explore__filter {
   background-color: var(--btn-primary-color);
 }

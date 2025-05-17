@@ -77,7 +77,7 @@ background-color: rgba(0, 0, 0, 0.5)
     background-color: var(--btn-secondary-color);
 }
 .donate__now {
-    background-color: var(--btn-secondary-color);
+    background-color: var(--btn-primary-color);
         color: white;
         padding: 0.8rem 1.5rem;
         
@@ -91,9 +91,26 @@ background-color: rgba(0, 0, 0, 0.5)
 
 
 .donate__now:hover {
-    background-color: var(--btn-primary-color);
+    background-color: var(--btn-secondary-color);
 }
 
+.explore__card__style{
+  transition: all 0.4s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); 
+  border-radius: 12px;
+}
+.explore__card__style:hover{
+ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+  transform: translateY(-5px);
+}
+.learnmore{
+    color: var(--btn-primary-color);
+    text-decoration: none;
+}
+.learnmore:hover{
+    color: var(--btn-secondary-color);
+    text-decoration: underline;
+}
 .explore__filter{
     padding: 50px 0;
     overflow: hidden;
