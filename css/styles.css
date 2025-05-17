@@ -1,28 +1,6 @@
-/* .btn-secondary {
-    background-color: var(--color-secondary);
-    color: var(--color-accent);
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    font-family: var(--font-heading);
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.btn-secondary:hover {
-    background-color: var(--color-accent);
-    color: white;
-} */
-
-/* تقسيم الأقسام */
-/* .container {
-    width: 80%;
-    margin: 0 auto;
-
-/* ربط المتغيرات والخطوط */
 @import url('variables.css');
 @import url('fonts.css');
 
-/* إعدادات الخطوط */
 body {
     font-family: var(--font-primary);
     font-size: var(--font-size-base);
@@ -117,16 +95,16 @@ svg {
     left: 0;
 }
 
-/* أنيميشن لظهور شريط التقدم */
+
 @keyframes progressBar {
     from {
         stroke-dashoffset: 472;
-        /* البداية من 0 */
+        
     }
 
     to {
         stroke-dashoffset: 164;
-        /* 65% من 472 */
+        
     }
 }
 
@@ -196,12 +174,7 @@ svg {
     background-color: var(--btn-secondary-color);
     transform: scale(1.05);
 }
-/* 
-hr {
-    border: 0;
-    border-top: 3px solid darkgreen;
-    margin: 1rem 0;
-} */
+
 
 .donation__states {
     text-align: left;
@@ -249,7 +222,6 @@ circle {
 .fundraising__progress {
     display: flex;
     align-items: center;
-    /* يوسط العناصر رأسيًا */
     gap: 2rem;
 }
 
@@ -372,12 +344,11 @@ hr{
     opacity: 1;
 }
 
-/* باقي الكود السابق */
 
 /* ********************************************************************** */
 
 .gallery img{
-    width:100%;
+    max-width:95%;
     height:auto;
 }
 .compaign__details--video .video {
@@ -392,13 +363,10 @@ hr{
 }
 
 
+
 .gallery:hover{
     opacity:0.5;
     cursor: pointer;
-}
-
-.compaign__details--video,.compaign__details--gallery{
-    display: none;
 }
 
 .compaign__details--gallery{
@@ -406,6 +374,7 @@ hr{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
+
 
 /* ******************************************** */
 .register__btn{
@@ -511,3 +480,171 @@ hr{
     color:#a7b3ab;
 }
 
+/* زززززززززززززززززززززز */
+.tab-content>.tab-pane {
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-top: none;
+    background-color: #f9f9f9;
+}
+
+.gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* ====== Gallery Animation ====== */
+.compaign__details--gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    animation: fadeInUp 0.6s ease forwards;
+    background-color: var(--card-third-color);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* ====== Individual Image Styling ====== */
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ====== Hover Effect on Image ====== */
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+    
+        .gallery:nth-child(6) {
+            animation-delay: 1.7s;
+        } */
+
+
+i{
+    font-size: 2.3rem;
+    /* height:auto; */
+    color:var(--card-primary-color);
+}
+
+.nav-icon{
+    color: var(--btn-secondary-color);
+    font-size: 2rem;
+    margin-right: 0.5em;
+}
+
+/* ////////////////////////// */
+.donation__form--title{
+    font-size: 1.7rem;
+    color:var(--btn-secondary-color)
+}
+
+input{
+    background-color: transparent;
+}
+#form-body{
+    background-color: var(--card-primary-color);
+    backdrop-filter: blur(6px);
+
+}
+
+form{
+    background-color: transparent;
+}
+
+/* .nav__donation{
+    background-color: transparent;
+    z-index: 1000;
+} */
+
+
+
+.payment__btn{
+    background-color: var(--btn-primary-color);
+    transition: all 0.5s;
+    color: white;
+    font-weight: 500;
+}
+
+.payment__btn:hover{
+    transform: scale(1.05);
+    background-color: var(--btn-secondary-color);
+    color:white;
+    font-weight: 700;
+}
+
+
+.image-header {
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2em;
+}
+@media (max-width: 768px) {
+    .image-header {
+        height: 40vh;
+    } }
+
+    
+        .image-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            opacity: 03;
+        }
+    
+        .nav__donation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            backdrop-filter: blur(3px);
+            z-index: 10;
+            padding: 0.5rem 0; 
+            box-shadow: none !important;
+        }
+
+        /* ********************** */
+
+#login__body{
+    background-image: linear-gradient(var(--background-color),var(--card-primary-color), var(--background-color));
+}
+
+.social i {
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.social i:hover {
+    transform: scale(1.3);
+    color: var(--btn-secondary-color); }
+
+#signin__btn{
+    transition: 0.4s;
+}
+
+#signin__btn:hover{
+        background-color: var(--btn-secondary-color) !important;
+        transform: scale(1.05);
+        font-weight: 500;
+
+    }
+
+#forget__link:hover{
+    /* transform: scale(1.5) !important; */
+    color:var(--btn-secondary-color)!important;
+    text-decoration: underline !important;
+
+}
+
+input{
+    outline: none !important;
+    border: transparent !important;
+}
