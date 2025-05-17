@@ -139,7 +139,20 @@ background-color: rgba(0, 0, 0, 0.5)
     display: none;
     
 }
-
+.explore__pagenation ul li{
+background-color: var(--btn-primary-color);
+}
+.explore__pagenation ul li:hover{
+background-color: var(--btn-secondary-color);
+}
+.explore__pagenation button{
+  background-color: var(--btn-primary-color);
+  color: var(--background-color);
+}
+.explore__pagenation button:hover{
+background-color: var(--btn-secondary-color);
+color: var(--background-color);
+}
 @media screen and (max-width: 500px) {
     .dropdown__filter__responsive {
         /* display: block !important; */

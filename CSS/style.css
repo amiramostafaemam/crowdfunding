@@ -15,9 +15,7 @@ body {
   padding: 0;
   background-color:var(--background-color);
 }
-.homepage__slider {
-  /* max-height: 50vh; */
-}
+
 .homepage__slider img {
   height: 60vh;
   object-fit: cover;
