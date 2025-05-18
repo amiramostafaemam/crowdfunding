@@ -81,6 +81,9 @@ body {
     height: 5px;
 }
 
+.explore__campain__info , .Explore__campainer__name{
+  color: var(--btn-secondary-color);
+}
 .explore__body .progress-bar{
     height: 5px;
     background-color: var(--btn-secondary-color);

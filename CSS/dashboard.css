@@ -1,0 +1,36 @@
+:root {
+  /* Brand Colors */
+  --background-color: #f1f7f0;
+  --card-third-color: #ecf3eb;
+  --card-primary-color: #cddcca;
+  --card-secondary-color: #8ea58c;
+  --btn-primary-color: #738a6e;
+  --btn-secondary-color: #344c3d;
+  --section-padding: 3.3rem 0px;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color:var(--background-color);
+}
+.dashboard__title{
+    color: var(--btn-secondary-color);
+}
+.dashboard__items{
+    color: var(--btn-primary-color);
+}
+.dashboard__items:hover{
+    background-color: #738a6e;
+    color: white
+
+}
+.dashboard__box{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    background-color: var(--card-secondary-color);
+    /* aspect-ratio: 1 / 1; */
+    color: white;
+    
+}
