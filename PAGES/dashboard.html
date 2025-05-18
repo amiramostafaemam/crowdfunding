@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="col-lg-10">
-                <div class="my-3 p-4">
+                <div class="dashboard__table my-3 p-4 " id="dashboardTable">
                     <h3 class="my-3">Dahboard</h3>
                     <div class="border border-1 p-3 rounded-2 ">
                         <h4>Platform Summary</h4>
@@ -62,8 +62,9 @@
                         </div>
                         <div>
                             <h5>Users</h5>
-                            <table class="table table-striped table-bordered ">
-                                <thead >
+                            <table
+                                class="table table-striped table-hover table-bordered rounded-3 overflow-hidden shadow-sm bg-white">
+                                <thead class="table-light">
                                     <tr>
                                         <th>#</th>
                                         <th>Name</th>
@@ -79,20 +80,20 @@
                                         <td>Jane Doe</td>
                                         <td>jane@example.com</td>
                                         <td>Admin</td>
-                                        <td><span>3</span> campains</td>
-                                        <td><button class="btn btn-sm btn-primary">Edit</button></td>
+                                        <td><span>3</span> campaigns</td>
+                                        <td><button class="btn btn-sm btn-outline-danger">Remove</button></td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>John Smith</td>
                                         <td>john@example.com</td>
                                         <td>User</td>
-                                        <td><span>7</span> pledges </td>
-                                        <td><button class="btn btn-sm btn-secondary">Edit</button></td>
+                                        <td><span>7</span> pledges</td>
+                                        <td><button class="btn btn-sm btn-outline-danger">Remove</button></td>
                                     </tr>
-
                                 </tbody>
                             </table>
+
 
                         </div>
 
@@ -101,6 +102,11 @@
 
                     </div>
                 </div>
+                
+                <div id="campainsTable" class="table-container d-none">
+                    
+                </div>
+                <div id="pledgeTable" class="table-container d-none"></div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
