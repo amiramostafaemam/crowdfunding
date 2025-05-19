@@ -1,0 +1,318 @@
+{
+  "users": [
+  {
+    "id": 1,
+    "name": "Jane Doe",
+    "email": "jane@example.com",
+    "password": "hashed123",
+    "role": "campaigner",
+    "isActive": true
+  },
+  {
+    "id": 2,
+    "name": "Ali Hassan",
+    "email": "ali@example.com",
+    "password": "hashed456",
+    "role": "baker",
+    "isActive": true
+  }
+],
+  "admins": [
+    {
+      "name": "Super Admin",
+      "email": "admin@example.com",
+      "password": "admin_hashed"
+    }
+  ],
+  "campaigns": [
+    
+    {
+      "id": "1",
+      "title": "Earthquake Relief for Morocco",
+      "creatorId": 1,
+      "category": "disaster",
+      "goal": 10000,
+      "current": 0,
+      "backers": 0,
+      "deadline": "2024-12-31",
+      "isApproved": true,
+      "description": "Support families affected by the recent earthquake in Morocco by helping us provide emergency shelters and medical aid.",
+      "video": "",
+      "gallery": ["/img/earthquake.jpg"],
+      "rewards": []
+    },
+    {
+      "id": "2",
+      "title": "Flood Recovery in Bangladesh",
+      "creatorId": 1,
+      "category": "disaster",
+      "goal": 7000,
+      "current": 0,
+      "backers": 0,
+      "deadline": "2024-11-15",
+      "isApproved": true,
+      "description": "Help provide clean water, food, and basic supplies to flood-hit communities in Bangladesh.",
+      "video": "",
+      "gallery": ["/img/flood.jpg"],
+      "rewards": []
+    },
+    {
+      "id": "3",
+      "title": "Wildfire Emergency Support",
+      "creatorId": 1,
+      "category": "disaster",
+      "goal": 12000,
+      "current": 0,
+      "backers": 0,
+      "deadline": "2025-01-10",
+      "isApproved": true,
+      "description": "Raise funds to support victims of the recent wildfires with clothing, housing, and healthcare.",
+      "video": "",
+      "gallery": ["/img/wildfire.jpg"],
+      "rewards": []
+    },
+
+    
+    {
+      "id": "4",
+      "title": "Single Mother Housing Aid",
+      "creatorId": 1,
+      "category": "family",
+      "goal": 5000,
+      "current": 0,
+      "backers": 0,
+      "deadline": "2024-12-01",
+      "isApproved": true,
+      "description": "Help a struggling single mother secure a safe home for her and her two children.",
+      "video": "",
+      "gallery": ["/img/family1.jpg"],
+      "rewards": []
+    },
+    {
+      "id": "5",
+      "title": "Medical Treatment for a Newborn",
+      "creatorId": 1,
+      "category": "family",
+      "goal": 8000,
+      "current": 0,
+      "backers": 0,
+      "deadline": "2024-11-20",
+      "isApproved": true,
+      "description": "A family seeks urgent help to cover surgery costs for their newborn diagnosed with a heart condition.",
+      "video": "",
+      "gallery": ["/img/family2.jpg"],
+      "rewards": []
+    },
+    {
+      "id": "6",
+      "title": "Support for a Family After Job Loss",
+      "creatorId": 1,
+      "category": "family",
+      "goal": 3000,
+      "current": 0,
+      "backers": 0,
+      "deadline": "2024-10-25",
+      "isApproved": true,
+      "description": "A father who lost his job needs your help to keep his family afloat during this tough time.",
+      "video": "",
+      "gallery": ["/img/family3.jpg"],
+      "rewards": []
+    },
+
+    
+    {
+      "id": "7",
+      "title": "Operation Smile: Cleft Lip Surgeries",
+      "creatorId": 1,
+      "category": "children",
+      "goal": 6000,
+      "current": 0,
+      "backers": 0,
+      "deadline": "2025-01-01",
+      "isApproved": true,
+      "description": "Give children with cleft lips a new smile and confidence through surgery and care.",
+      "video": "",
+      "gallery": ["/img/children1.jpg"],
+      "rewards": []
+    },
+    {
+      "id": "8",
+      "title": "School Backpacks for Orphans",
+      "creatorId": 1,
+      "category": "children",
+      "goal": 4000,
+      "current": 0,
+      "backers": 0,
+      "deadline": "2024-09-30",
+      "isApproved": true,
+      "description": "Help us provide school bags and supplies to 100 orphaned children.",
+      "video": "",
+      "gallery": ["/img/children2.jpg"],
+      "rewards": []
+    },
+    {
+      "id": "9",
+      "title": "Nutrition for Street Children",
+      "creatorId": 1,
+      "category": "children",
+      "goal": 5000,
+      "current": 0,
+      "backers": 0,
+      "deadline": "2024-12-20",
+      "isApproved": true,
+      "description": "Provide nutritious meals to street children suffering from malnutrition.",
+      "video": "",
+      "gallery": ["/img/children3.jpg"],
+      "rewards": []
+    },
+
+    
+    {
+      "id": "10",
+      "title": "Sponsor a Student’s Tuition",
+      "creatorId": 1,
+      "category": "education",
+      "goal": 2000,
+      "current": 0,
+      "backers": 0,
+      "deadline": "2024-10-10",
+      "isApproved": true,
+      "description": "Support an underprivileged student to continue their university education.",
+      "video": "",
+      "gallery": ["/img/edu1.jpg"],
+      "rewards": []
+    },
+    {
+      "id": "11",
+      "title": "Build a Rural Library",
+      "creatorId": 1,
+      "category": "education",
+      "goal": 10000,
+      "current": 0,
+      "backers": 0,
+      "deadline": "2024-12-05",
+      "isApproved": true,
+      "description": "Create a reading space and provide books to children in a rural village.",
+      "video": "",
+      "gallery": ["/img/edu2.jpg"],
+      "rewards": []
+    },
+    {
+      "id": "12",
+      "title": "Digital Access for Refugee Kids",
+      "creatorId": 1,
+      "category": "education",
+      "goal": 8000,
+      "current": 0,
+      "backers": 0,
+      "deadline": "2025-01-15",
+      "isApproved": true,
+      "description": "Provide tablets and internet access to refugee children for online learning.",
+      "video": "",
+      "gallery": ["/img/edu3.jpg"],
+      "rewards": []
+    },
+
+  
+    {
+      "id": "13",
+      "title": "Save the Sea Turtles",
+      "creatorId": 1,
+      "category": "wildlife",
+      "goal": 5000,
+      "current": 0,
+      "backers": 0,
+      "deadline": "2024-12-22",
+      "isApproved": true,
+      "description": "Fund patrol teams to protect sea turtle nests on remote beaches.",
+      "video": "",
+      "gallery": ["/img/wild1.jpg"],
+      "rewards": []
+    },
+    {
+      "id": "14",
+      "title": "Elephant Rescue Mission",
+      "creatorId": 1,
+      "category": "wildlife",
+      "goal": 9000,
+      "current": 0,
+      "backers": 0,
+      "deadline": "2025-01-30",
+      "isApproved": true,
+      "description": "Support the rescue and rehabilitation of elephants from illegal captivity.",
+      "video": "",
+      "gallery": ["/img/wild2.jpg"],
+      "rewards": []
+    },
+    {
+      "id": "15",
+      "title": "Reforestation for Wildlife Habitats",
+      "creatorId": 1,
+      "category": "wildlife",
+      "goal": 11000,
+      "current": 0,
+      "backers": 0,
+      "deadline": "2025-02-10",
+      "isApproved": true,
+      "description": "Help plant trees to restore habitats for endangered wildlife in South America.",
+      "video": "",
+      "gallery": ["/img/wild3.jpg"],
+      "rewards": []
+    },
+    {
+      "id": "16",
+      "title": "Medical Equipment for Disabled Children",
+      "creatorId": 1,
+      "category": "medical",
+      "goal": 11000,
+      "current": 0,
+      "backers": 0,
+      "deadline": "2025-02-10",
+      "isApproved": true,
+      "description": "Many children in our community suffer from mobility challenges and require wheelchairs and supportive devices. This campaign aims to provide essential medical equipment to improve their quality of life and independence.",
+      "video": "",
+      "gallery": ["/img/wild3.jpg"],
+      "rewards": []
+    },
+    {
+      "id": "17",
+      "title": "Support Sara’s Cancer Treatment",
+      "creatorId": 1,
+      "category": "medical",
+      "goal": 11000,
+      "current": 0,
+      "backers": 0,
+      "deadline": "2025-02-10",
+      "isApproved": true,
+      "description": "Sara, a 32-year-old mother of two, has been diagnosed with stage 3 breast cancer. She needs help affording chemotherapy, medication, and ongoing hospital visits. With your donation, she can continue her fight against cancer.",
+      "video": "",
+      "gallery": ["/img/wild3.jpg"],
+      "rewards": []
+    },
+    {
+      "id": "18",
+      "title": "Urgent Heart Surgery for Ahmed",
+      "creatorId": 1,
+      "category": "medical",
+      "goal": 11000,
+      "current": 0,
+      "backers": 0,
+      "deadline": "2025-02-10",
+      "isApproved": true,
+      "description": "Ahmed, a 9-year-old boy, is in critical need of heart surgery to treat a congenital heart defect. His condition is deteriorating rapidly, and he requires immediate medical intervention. Your support can help save his life.",
+      "video": "",
+      "gallery": ["/img/wild3.jpg"],
+      "rewards": []
+    }
+    
+  ],
+  "pledges": [
+    {
+      "campaignId": 1,
+      "userId": 2,
+      "amount": 100,
+      "rewardId": 1,
+      "date": "2024-05-19"
+    }
+  ]
+}
