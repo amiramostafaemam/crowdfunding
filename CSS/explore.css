@@ -41,8 +41,21 @@ background-color: rgba(0, 0, 0, 0.5)
 
 
 }
+.explore__card__style{ 
+    display: flex;
+    flex-direction: column;
+    
+}
 .explore__card{
     overflow: hidden;
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.explore__card img{
+    height: 266.66px;
 }
 .explore__card__layer{
     top: 0;

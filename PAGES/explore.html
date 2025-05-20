@@ -31,38 +31,45 @@
     </div>
     <section class="container explore__filter position-relative">
         <ul class="explore__filter__ul list-unstyled d-flex justify-content-center ">
-            <li class="first__li fw-bold">
+            <li class="first__li fw-bold " data-category="all">
+                <div class="d-flex flex-column  align-items-center mt-2">
+                    <a href="" class="text-secondary "><i class="fas fa-globe fa-2xl"
+                            style=""></i></a>
+                    <p class="py-2">All</p>
+                </div>
+            </li>
+            <li class="mx-5 fw-bold" data-category="medical">
                 <div class="d-flex flex-column  align-items-center mt-2">
                     <a href="" class="text-secondary "><i class="fa-solid fa-hand-holding-medical fa-2xl"
                             style=""></i></a>
                     <p class="py-2">Medical</p>
                 </div>
             </li>
-            <li class="mx-5 fw-bold">
+            <li class="mx-5 fw-bold" data-category="disaster">
                 <div class="d-flex flex-column  align-items-center mt-2">
                     <a href="" class="text-secondary  "><i class="fa-solid fa-house-chimney-crack fa-2xl"></i></a>
                     <p class="py-2">Disaster</p>
                 </div>
             </li>
-            <li class="mx-5 fw-bold">
+            <li class="mx-5 fw-bold " data-category="family">
                 <div class="d-flex flex-column  align-items-center mt-2">
                     <a href="" class="text-secondary "><i class="fa-solid fa-hands-holding-child fa-2xl"></i></a>
                     <p class="py-2">Family</p>
                 </div>
             </li>
-            <li class="mx-5 fw-bold">
+            <li class="mx-5 fw-bold" data-category="children">
                 <div class="d-flex flex-column  align-items-center mt-2">
                     <a href="" class="text-secondary "><i class="fa-solid fa-children fa-2xl"></i></a>
                     <p class="py-2">Children</p>
                 </div>
             </li>
-            <li class="mx-5 fw-bold">
+            <li class="mx-5 fw-bold" data-category="education">
                 <div class="d-flex flex-column  align-items-center mt-2">
                     <a href="" class="text-secondary "><i class="fa-solid fa-brain fa-2xl"></i></a>
                     <p class="py-2">Education</p>
                 </div>
             </li>
-            <li class="mx-5 fw-bold">
+            <li class="mx-5 fw-bold" data-category="wildlife">
                 <div class="d-flex flex-column  align-items-center mt-2">
                     <a href="" class="text-secondary "><i class="fa-solid fa-circle-radiation fa-2xl"></i></a>
                     <p class="py-2">Wildlife</p>
@@ -73,6 +80,7 @@
 
     <section class="explore__body container ">
         <div class="row" id="card__container">
+            <h1 class="d-none"></h1>
 
             <!-- <div class="col-lg-4 col-sm-12 mb-5 ">
                 <div class="explore__card__style p-2">

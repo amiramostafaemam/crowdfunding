@@ -31,7 +31,7 @@ function displayCard() {
   card1 += `
     <div>
                         <div class="explore__card position-relative rounded-3 overflow-hidden">
-                            <img src="/${
+                            <img src=".${
                               alldata[0].details.gallery[0]
                             }" alt="" class="explore__card--img" >
                         </div>
@@ -64,7 +64,7 @@ function displayCard() {
     <div class="col-lg-6 col-sm-12">
                             <div>
                                 <div class="explore__card position-relative rounded-3 overflow-hidden">
-                                    <img src="/${alldata[i].details.gallery}" alt=""
+                                    <img src=".${alldata[i].details.gallery}" alt=""
                                         class="explore__card--img">
                                 </div>
                                 <p class="Explore__campainer__name mt-2">campainer name</p>
