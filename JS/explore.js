@@ -31,6 +31,7 @@ targetInput.addEventListener("input", function () {
     display(allData); 
     return;
   }
+
   let filteredResults = allData.filter(item =>
     item.title.toLowerCase().includes(inputValue)
   );
@@ -153,3 +154,63 @@ for (let i = 0; i < filterItems.length; i++) {
 //   }
 // }
 //search input
+
+//pagenation
+let currentPage = 1; //current page
+const itemsPerPage = 6; 
+
+function displayPage(data, page = 1) {
+  const start = (page - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const pagedData = data.slice(start, end);
+  display(pagedData);
+  updatePaginationButtons(page, Math.ceil(data.length / itemsPerPage));
+}
+
+function updatePaginationButtons(page, totalPages) {
+  document.getElementById("currentPage").textContent = page;
+  document.getElementById("totalPages").textContent = totalPages;
+
+  document.getElementById("prevBtn").disabled = page <= 1;
+  document.getElementById("nextBtn").disabled = page >= totalPages;
+}
+
+
+document.getElementById("prevBtn").addEventListener("click", () => {
+  if (currentPage > 1) {
+    currentPage--;
+    updateDisplay();
+  }
+});
+
+document.getElementById("nextBtn").addEventListener("click", () => {
+  const totalPages = Math.ceil(getCurrentData().length / itemsPerPage);
+  if (currentPage < totalPages) {
+    currentPage++;
+    updateDisplay();
+  }
+});
+function getCurrentData() {
+  
+  if (targetCategory && filterData.length > 0) {
+    return filterData;
+  }
+  return allData;
+}
+function updateDisplay() {
+  const data = getCurrentData();
+  displayPage(data, currentPage);
+}
+
+if (targetCategory) {
+  getFilteredData().then(() => {
+    currentPage = 1;
+    updateDisplay();
+  });
+} else {
+  getAllData().then(() => {
+    currentPage = 1;
+    updateDisplay();
+  });
+}
+

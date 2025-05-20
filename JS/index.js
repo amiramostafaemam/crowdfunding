@@ -21,12 +21,12 @@ async function getdata(data) {
     console.error("error is : ", error);
   }
 }
-getdata();
+// getdata();
 //function to display cards
 function displayCard() {
   let card1 = ``;
   let cards = ``;
-  const user = userdata.find((u) => u.id === getdata.creatorId);
+//   const user = userdata.find((u) => u.id === getdata.creatorId);
   //display first card
   card1 += `
     <div>
@@ -35,7 +35,7 @@ function displayCard() {
                               alldata[0].details.gallery[0]
                             }" alt="" class="explore__card--img" >
                         </div>
-                         <p class="Explore__campainer__name mt-2">${user}</p>
+                         <p class="Explore__campainer__name mt-2">${alldata[0].creatorId}</p>
                         <p class="explore__campain__category my-2 fw-bold h4">${
                           alldata[0].title
                         }</p>
@@ -115,4 +115,36 @@ targetEducation.addEventListener('click' ,function(){
 });
 targetWildlife.addEventListener('click' ,function(){
     window.location.href = "../pages/explore.html?category=wildlife";
+});
+
+//pagenation
+let currentPage = 1;
+let limit = 3; 
+
+async function getCampaigns(page = 1) {
+  try {
+    let response = await fetch(`http://localhost:4000/campaigns?_page=${page}&_limit=${limit}`);
+    let data = await response.json();
+    alldata =data
+    displayCard();
+  } catch (error) {
+    console.error("Error fetching campaigns:", error);
+  }
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => {
+  if (currentPage > 1) {
+    currentPage--;
+    getCampaigns(currentPage);
+  }
+});
+
+document.getElementById("nextBtn").addEventListener("click", () => {
+  currentPage++;
+  getCampaigns(currentPage);
+});
+
+getdata()
+.then(() => {
+  getCampaigns(); // بعد ما اليوزر داتا جه
 });
