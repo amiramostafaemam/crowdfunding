@@ -86,6 +86,7 @@ function displayCard() {
 }
 
 //select all explore filter divs
+let learnmore = document.querySelector('.learnmore');
 let targetMedical =document.querySelector("#explore__medical")
 let targetDisaster = document.querySelector('#explore__disaster');
 let targetFamily =document.querySelector('#explore__family');
@@ -93,6 +94,9 @@ let targetChildren =document.querySelector('#explore__children');
 let targetEducation =document.querySelector('#explore__education');
 let targetWildlife =document.querySelector('#explore__wildlife');
 
+// learnmore.addEventListener('click' ,function(){
+//     window.location.href = "../pages/details.html?category=medical";
+// })
 targetMedical.addEventListener('click' ,function(){
     window.location.href = "../pages/explore.html?category=medical";
 });

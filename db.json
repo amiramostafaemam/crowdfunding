@@ -1,29 +1,39 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Jane Doe",
       "email": "jane@example.com",
       "password": "hashed123",
       "role": "campaigner",
       "isActive": true,
-      "totalCampains" : 10
+      "totalCampains": 10
     },
     {
-      "id": 2,
-      "name": "Ali Hassan",
-      "email": "ali@example.com",
-      "password": "hashed456",
-      "role": "baker",
+      "id": "2",
+      "name": "Jane Doe",
+      "email": "jane@example.com",
+      "password": "hashed123",
+      "role": "campaigner",
       "isActive": true,
-      "totalCampains" : 15
+      "totalCampains": 10
+    },
+    {
+      "id": "3",
+      "name": "Jane Doe",
+      "email": "jane@example.com",
+      "password": "hashed123",
+      "role": "campaigner",
+      "isActive": true,
+      "totalCampains": 10
     }
   ],
   "admins": [
     {
       "name": "Super Admin",
       "email": "admin@example.com",
-      "password": "admin_hashed"
+      "password": "admin_hashed",
+      "id": "62f1"
     }
   ],
   "campaigns": [
@@ -40,7 +50,9 @@
       "details": {
         "description": "Support families affected by the recent earthquake in Morocco by helping us provide emergency shelters and medical aid.",
         "video": "",
-        "gallery": ["/assets/images/Earthquake.webp"],
+        "gallery": [
+          "/assets/images/Earthquake.webp"
+        ],
         "rewards": []
       }
     },
@@ -57,7 +69,9 @@
       "details": {
         "description": "Help provide clean water, food, and basic supplies to flood-hit communities in Bangladesh.",
         "video": "",
-        "gallery": ["/assets/images/diverse-people-refugee-camps.webp"],
+        "gallery": [
+          "/assets/images/diverse-people-refugee-camps.webp"
+        ],
         "rewards": []
       }
     },
@@ -74,7 +88,9 @@
       "details": {
         "description": "Raise funds to support victims of the recent wildfires with clothing, housing, and healthcare.",
         "video": "",
-        "gallery": ["/assets/images/Wildfire.webp"],
+        "gallery": [
+          "/assets/images/Wildfire.webp"
+        ],
         "rewards": []
       }
     },
@@ -91,7 +107,9 @@
       "details": {
         "description": "Help a struggling single mother secure a safe home for her and her two children.",
         "video": "",
-        "gallery": ["/assets/images/singleMother.webp"],
+        "gallery": [
+          "/assets/images/singleMother.webp"
+        ],
         "rewards": []
       }
     },
@@ -108,7 +126,9 @@
       "details": {
         "description": "A family seeks urgent help to cover surgery costs for their newborn diagnosed with a heart condition.",
         "video": "",
-        "gallery": ["/assets/images/newborn.webp"],
+        "gallery": [
+          "/assets/images/newborn.webp"
+        ],
         "rewards": []
       }
     },
@@ -125,11 +145,12 @@
       "details": {
         "description": "A father who lost his job needs your help to keep his family afloat during this tough time.",
         "video": "",
-        "gallery": ["/assets/images/joblose.webp"],
+        "gallery": [
+          "/assets/images/joblose.webp"
+        ],
         "rewards": []
       }
     },
-
     {
       "id": "7",
       "title": "Operation Smile: Cleft Lip Surgeries",
@@ -143,7 +164,9 @@
       "details": {
         "description": "Give children with cleft lips a new smile and confidence through surgery and care.",
         "video": "",
-        "gallery": ["/assets/images/children_homeless.webp"],
+        "gallery": [
+          "/assets/images/children_homeless.webp"
+        ],
         "rewards": []
       }
     },
@@ -160,7 +183,9 @@
       "details": {
         "description": "Help us provide school bags and supplies to 100 orphaned children.",
         "video": "",
-        "gallery": ["/assets/images/Orphanage.webp"],
+        "gallery": [
+          "/assets/images/Orphanage.webp"
+        ],
         "rewards": []
       }
     },
@@ -177,11 +202,12 @@
       "details": {
         "description": "Provide nutritious meals to street children suffering from malnutrition.",
         "video": "",
-        "gallery": ["/assets/images/street_children.webp"],
+        "gallery": [
+          "/assets/images/street_children.webp"
+        ],
         "rewards": []
       }
     },
-
     {
       "id": "10",
       "title": "Sponsor a Student’s Tuition",
@@ -195,7 +221,9 @@
       "details": {
         "description": "Support an underprivileged student to continue their university education.",
         "video": "",
-        "gallery": ["/assets/images/Student’s_Tuition.webp"],
+        "gallery": [
+          "/assets/images/Student’s_Tuition.webp"
+        ],
         "rewards": []
       }
     },
@@ -212,7 +240,9 @@
       "details": {
         "description": "Create a reading space and provide books to children in a rural village.",
         "video": "",
-        "gallery": ["/assets/images/Rural_Library.webp"],
+        "gallery": [
+          "/assets/images/Rural_Library.webp"
+        ],
         "rewards": []
       }
     },
@@ -229,11 +259,12 @@
       "details": {
         "description": "Provide tablets and internet access to refugee children for online learning.",
         "video": "",
-        "gallery": ["/assets/images/Refugee_Kids.webp"],
+        "gallery": [
+          "/assets/images/Refugee_Kids.webp"
+        ],
         "rewards": []
       }
     },
-
     {
       "id": "13",
       "title": "Save the Sea Turtles",
@@ -247,7 +278,9 @@
       "details": {
         "description": "Fund patrol teams to protect sea turtle nests on remote beaches.",
         "video": "",
-        "gallery": ["/assets/images/turtels.webp"],
+        "gallery": [
+          "/assets/images/turtels.webp"
+        ],
         "rewards": []
       }
     },
@@ -264,7 +297,9 @@
       "details": {
         "description": "Support the rescue and rehabilitation of elephants from illegal captivity.",
         "video": "",
-        "gallery": ["/assets/images/elephant.webp"],
+        "gallery": [
+          "/assets/images/elephant.webp"
+        ],
         "rewards": []
       }
     },
@@ -281,7 +316,9 @@
       "details": {
         "description": "Help plant trees to restore habitats for endangered wildlife in South America.",
         "video": "",
-        "gallery": ["/assets/images/Wildlife_Habitats.webp"],
+        "gallery": [
+          "/assets/images/Wildlife_Habitats.webp"
+        ],
         "rewards": []
       }
     },
@@ -298,7 +335,9 @@
       "details": {
         "description": "Many children in our community suffer from mobility challenges and require wheelchairs and supportive devices. This campaign aims to provide essential medical equipment to improve their quality of life and independence.",
         "video": "",
-        "gallery": ["/assets/images/prosthetic_limb.webp"],
+        "gallery": [
+          "/assets/images/prosthetic_limb.webp"
+        ],
         "rewards": []
       }
     },
@@ -315,7 +354,9 @@
       "details": {
         "description": "Sara, a 32-year-old mother of two, has been diagnosed with stage 3 breast cancer. She needs help affording chemotherapy, medication, and ongoing hospital visits. With your donation, she can continue her fight against cancer.",
         "video": "",
-        "gallery": ["/assets/images/cancer.webp"],
+        "gallery": [
+          "/assets/images/cancer.webp"
+        ],
         "rewards": []
       }
     },
@@ -332,7 +373,9 @@
       "details": {
         "description": "Ahmed, a 9-year-old boy, is in critical need of heart surgery to treat a congenital heart defect. His condition is deteriorating rapidly, and he requires immediate medical intervention. Your support can help save his life.",
         "video": "",
-        "gallery": ["/assets/images/Heart_Surgery.webp"],
+        "gallery": [
+          "/assets/images/Heart_Surgery.webp"
+        ],
         "rewards": []
       }
     }
@@ -343,8 +386,8 @@
       "userId": 2,
       "amount": 100,
       "rewardId": 1,
-      "date": "2024-05-19"
+      "date": "2024-05-19",
+      "id": "b978"
     }
   ]
-
 }

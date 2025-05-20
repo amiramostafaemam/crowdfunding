@@ -53,7 +53,7 @@ function displayUsers(all) {
                                         <td>${allUsers[i].email}</td>
                                         <td>${allUsers[i].password}</td>
                                         <td><span>${allUsers[i].totalCampains}</span> campaigns</td>
-                                        <td><button class="btn btn-sm btn-outline-danger">Remove</button></td>
+                                        <td><button onclick="deleteUser(${allUsers[i].id})" class="btn btn-sm btn-outline-danger" >Remove</button></td>
                                     </tr>
                                     
         `;
@@ -62,8 +62,26 @@ function displayUsers(all) {
 }
 
 //remove user from dashboard
-let removeUser = function () {};
+function deleteUser(userId) {
+  if (confirm("Are you sure you want to delete this user?")) {
+    fetch(`http://localhost:4000/users/${userId}`, {
+      method: "DELETE"
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Failed to delete user");
+      }
 
+      //delete user from []
+      allUsers = allUsers.filter(user => user.id !== userId);
+      //display data again
+      displayUsers(allUsers);
+    })
+    .catch(error => {
+      console.error("Error while deleting user:", error);
+    });
+  }
+}
 ////////////////////////////////////////////////////////////////////////////
 
 //fetch campaigns data
@@ -93,7 +111,7 @@ function displayCmpaign(all) {
     let actionIcons = isApproved
       ? `<i class="fa-solid fa-trash" style="color: #888; cursor: pointer;"></i>`
       : `<i class="fa-solid fa-check" style="color: #277e15; cursor: pointer; margin-right: 10px;"></i>
-         <i class="fa-solid fa-trash" style="color: #ff0000; cursor: pointer;"></i>`;
+         <i class="fa-solid fa-xmark" style="color: #ff0000; cursor: pointer;"></i>`;
 
     card += `
       <tr>
