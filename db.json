@@ -6,7 +6,8 @@
       "email": "jane@example.com",
       "password": "hashed123",
       "role": "campaigner",
-      "isActive": true
+      "isActive": true,
+      "totalCampains" : 10
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "email": "ali@example.com",
       "password": "hashed456",
       "role": "baker",
-      "isActive": true
+      "isActive": true,
+      "totalCampains" : 15
     }
   ],
   "admins": [
@@ -34,7 +36,7 @@
       "current": 5000,
       "backers": 400,
       "deadline": "2024-12-31",
-      "isApproved": true,
+      "isApproved": false,
       "details": {
         "description": "Support families affected by the recent earthquake in Morocco by helping us provide emergency shelters and medical aid.",
         "video": "",

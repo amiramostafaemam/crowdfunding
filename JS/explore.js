@@ -9,6 +9,7 @@ console.log(targetCategory);
 let filterData = [];
 let allData = [];
 
+
 // fetch all data
 async function getAllData() {
   try {
@@ -21,8 +22,23 @@ async function getAllData() {
   }
 }
 
-// fetch filtered data from home
+//search
+let targetInput = document.querySelector('.explore__input input');
+targetInput.addEventListener("input", function () {
+  let inputValue = targetInput.value.trim().toLowerCase();
 
+  if (inputValue === "") {
+    display(allData); 
+    return;
+  }
+  let filteredResults = allData.filter(item =>
+    item.title.toLowerCase().includes(inputValue)
+  );
+
+  display(filteredResults);
+});
+
+// fetch filtered data from home
 async function getFilteredData(data) {
   try {
     let response = await fetch(
@@ -44,21 +60,7 @@ if (targetCategory) {
   getAllData();
 }
 
-// search data 
-async function getSearchData(data) {
-  try {
-    let response = await fetch(
-      `http://localhost:4000/campaigns?q=${data}`
-    );
-    let finalData = await response.json();
-    filterData = finalData;
-    console.log(filterData);
-    //display filterd cards
-    display(filterData);
-  } catch (error) {
-    console.error("error is : ", error);
-  }
-}
+
 
 //function to display data
 function display(allData) {
@@ -135,19 +137,19 @@ for (let i = 0; i < filterItems.length; i++) {
   });
 }
 
-
+// search data 
+// async function getSearchData(data) {
+//   try {
+//     let response = await fetch(
+//       `http://localhost:4000/campaigns?q=Wild`
+//     );
+//     let finalData = await response.json();
+//     filterData = finalData;
+//     console.log(filterData);
+//     //display filterd cards
+//     display(filterData);
+//   } catch (error) {
+//     console.error("error is : ", error);
+//   }
+// }
 //search input
-let targetInput = document.querySelector('.explore__input input');
-
-targetInput.addEventListener("blur", function () {
-  let inputValue = targetInput.value.trim();
-
-  if (inputValue === "") {
-    document.querySelector(".card__container").style.display = "none";
-    document.querySelector("h1").style.display = "block";
-    document.querySelector("h1").innerText = "Enter valid name";
-    return; 
-  }
-
-  getSearchData(inputValue);
-});
