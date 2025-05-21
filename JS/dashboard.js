@@ -1,3 +1,10 @@
+//all counters
+let totalUsers = document.getElementById("dashboard__totalUsers");
+let totalCmpaigns = document.getElementById("dashboard__totalCampains");
+let totalPledges = document.getElementById("dashboard__totalPledges");
+let totalUnimproved = document.getElementById("dashboard__totalUnimproved")
+
+
 let dashboardTable = document.getElementById("dashboardTable");
 let campainsTable = document.getElementById("campainsTable");
 let pledgeTable = document.getElementById("pledgeTable");
@@ -24,6 +31,7 @@ document.getElementById("pledgeBtn").addEventListener("click", function () {
   pledgeTable.classList.remove("d-none");
 });
 
+
 //fetch users data
 let allUsers = [];
 async function getAllData(data) {
@@ -34,6 +42,7 @@ async function getAllData(data) {
     console.log(allUsers);
     //display table body
  displayUsers(allUsers);
+ displayCounters (allUsers);
   } catch (error) {
     console.error("error is : ", error);
   }
@@ -59,6 +68,40 @@ function displayUsers(all) {
         `;
   }
   document.getElementById("tableBody").innerHTML = card;
+}
+// function to display counters
+function displayCounters (){
+    let counter =``;
+    counter+=`<div class="col-md-3 ">
+                                <div class="my-3 text-center dashboard__box p-2 d-flex flex-column align-items-center">
+                                    <i class="fa-solid fa-users m-2"></i>
+                                    <p class="mb-2" id="dashboard__totalUsers">40</p>
+                                    <p class="mb-2">Total Users</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="my-3 text-center dashboard__box p-2 d-flex flex-column align-items-center">
+                                    <i class="fas fa-bullhorn m-2"></i>
+                                    <p class="mb-2" id="dashboard__totalCampains">40</p>
+                                    <p class="mb-2">Total Campains</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="my-3 text-center dashboard__box p-2 d-flex flex-column align-items-center">
+                                    <i class="fas fa-hand-holding-dollar m-2"></i>
+                                    <p class="mb-2" id="dashboard__totalPledges">40</p>
+                                    <p class="mb-2">Total Pledges</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="my-3 text-center dashboard__box p-2 d-flex flex-column align-items-center">
+                                    <i class="fas fa-circle-exclamation m-2"></i>
+                                    <p class="mb-2" id="dashboard__totalUnimproved">40</p>
+                                    <p class="mb-2">Unapproved Cmpaigns</p>
+                                </div>
+                            </div>`
+
+                            document.querySelector("#dashboard__counters").innerHTML = counter;
 }
 
 //remove user from dashboard

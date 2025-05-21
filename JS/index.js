@@ -121,30 +121,27 @@ targetWildlife.addEventListener('click' ,function(){
 let currentPage = 1;
 let limit = 3; 
 
-async function getCampaigns(page = 1) {
-  try {
-    let response = await fetch(`http://localhost:4000/campaigns?_page=${page}&_limit=${limit}`);
-    let data = await response.json();
-    alldata =data
-    displayCard();
-  } catch (error) {
-    console.error("Error fetching campaigns:", error);
-  }
-}
+// async function getCampaigns(page = 1) {
+//   try {
+//     let response = await fetch(`http://localhost:4000/campaigns?_page=${page}&_limit=${limit}`);
+//     let data = await response.json();
+//     alldata =data
+//     displayCard();
+//   } catch (error) {
+//     console.error("Error fetching campaigns:", error);
+//   }
+// }
 
-document.getElementById("prevBtn").addEventListener("click", () => {
-  if (currentPage > 1) {
-    currentPage--;
-    getCampaigns(currentPage);
-  }
-});
+// document.getElementById("prevBtn").addEventListener("click", () => {
+//   if (currentPage > 1) {
+//     currentPage--;
+//     getCampaigns(currentPage);
+//   }
+// });
 
-document.getElementById("nextBtn").addEventListener("click", () => {
-  currentPage++;
-  getCampaigns(currentPage);
-});
+// document.getElementById("nextBtn").addEventListener("click", () => {
+//   currentPage++;
+//   getCampaigns(currentPage);
+// });
 
-getdata()
-.then(() => {
-  getCampaigns(); // بعد ما اليوزر داتا جه
-});
+getdata();
