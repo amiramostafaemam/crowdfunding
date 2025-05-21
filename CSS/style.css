@@ -13,7 +13,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color:var(--background-color);
+  background-color: var(--background-color);
 }
 
 .homepage__slider img {
@@ -33,10 +33,10 @@ body {
   left: 0;
   background-color: rgb(0, 0, 0, 0.5);
 }
-.home__slider__lyar h1{
+.home__slider__lyar h1 {
   font-size: 4rem;
 }
-.home__slider__lyar p{
+.home__slider__lyar p {
   font-size: 1.1rem;
 }
 .home__slider__lyar div {
@@ -59,6 +59,23 @@ body {
 .donate__now:hover {
   background-color: var(--btn-secondary-color);
 }
+
+/* Animation Keyframes */
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply animation to active slide image */
+.carousel-item.active img {
+  animation: zoomInOut 2s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
 .explore__card {
   overflow: hidden;
   transition: all 0.3s ease;
@@ -74,20 +91,20 @@ body {
 .explore__card:hover .explore__card--img {
   transform: scale(1.1);
 }
-.progress-bar{
+.progress-bar {
   background-color: var(--btn-secondary-color);
 }
 .progress,
 .progress-stacked {
-  --bs-progress-height: .5rem;
+  --bs-progress-height: 0.5rem;
 }
-.learnmore{
-    color: var(--btn-primary-color);
-    text-decoration: none;
+.learnmore {
+  color: var(--btn-primary-color);
+  text-decoration: none;
 }
-.learnmore:hover{
-    color: var(--btn-secondary-color);
-    text-decoration: underline;
+.learnmore:hover {
+  color: var(--btn-secondary-color);
+  text-decoration: underline;
 }
 .home__explore__filter {
   background-color: var(--btn-primary-color);
@@ -100,20 +117,18 @@ body {
   /* overflow: hidden; */
   transition: transform 0.3s ease;
 }
-.random__explore--section button{
+.random__explore--section button {
   background-color: var(--btn-primary-color);
   color: var(--background-color);
 }
-.random__explore--section button:hover{
-background-color: var(--btn-secondary-color);
-color: var(--background-color);
+.random__explore--section button:hover {
+  background-color: var(--btn-secondary-color);
+  color: var(--background-color);
 }
 
 .bubble {
   position: absolute;
-
   border-radius: 50%;
-
   opacity: 0;
   transform: scale(0);
   transition: all 0.4s ease;
@@ -167,39 +182,45 @@ color: var(--background-color);
 .home__explore__item6 .bubble {
   background-color: #9d1e65;
 }
-.fundRaisers__section__numbers button{
+.fundRaisers__section__numbers button {
   background-color: var(--btn-primary-color);
 }
-.fundRaisers__section__numbers button:hover{
+.fundRaisers__section__numbers button:hover {
   background-color: var(--btn-secondary-color);
 }
- @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    .animate {
-      animation: fadeUp 1s ease forwards;
-    }
+.animate {
+  animation: fadeUp 1s ease forwards;
+}
 
-    .delay-1 { animation-delay: 0.3s; }
-    .delay-2 { animation-delay: 0.6s; }
-    .delay-3 { animation-delay: 0.9s; }
+.delay-1 {
+  animation-delay: 0.3s;
+}
+.delay-2 {
+  animation-delay: 0.6s;
+}
+.delay-3 {
+  animation-delay: 0.9s;
+}
 
-    .side-img {
-      width: 90px;
-      border-radius: 10px;
-      filter: grayscale(100%);
-    }
+.side-img {
+  width: 90px;
+  border-radius: 10px;
+  filter: grayscale(100%);
+}
 
-    @media (max-width: 768px) {
-      .d-md-flex {
-        display: none !important;
-      }
-    }
+@media (max-width: 768px) {
+  .d-md-flex {
+    display: none !important;
+  }
+}

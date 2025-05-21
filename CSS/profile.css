@@ -1,0 +1,152 @@
+:root {
+  /* Brand Colors */
+  --background-color: #f1f7f0;
+  --card-third-color: #ecf3eb;
+  --card-primary-color: #cddcca;
+  --card-secondary-color: #8ea58c;
+  --btn-primary-color: #738a6e;
+  --btn-secondary-color: #344c3d;
+  --section-padding: 3.3rem 0px;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color:var(--background-color);
+}
+.profile.container {
+    margin-top: 0.1rem;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    color: #344C3D;
+}
+
+/* Upper part with user image and info */
+.profile__bg{
+    background-color: #738A6E;
+}
+.profile__user.upper__part {
+    /* background-color: #F1F7F0; */
+    padding: 3rem;
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 3rem;
+    min-height: 200px;
+}
+
+#profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #cddcca;
+    bottom: -30px;
+    left: 20px;
+}
+
+.user__info {
+    bottom: 1em;
+    left: 160px;
+    /* color: #344C3D; */
+}
+
+.user__info p {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Campaign section layout */
+.compaign {
+    gap: 2rem;
+}
+
+.add__compaign {
+    background-color: #ECF3EB;
+    padding: 1.5rem;
+    border-radius: 15px;
+    height: fit-content;
+    min-width: 200px;
+}
+
+.add__compaign p {
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.add__compaign p:hover {
+    color: #738A6E;
+}
+
+.add__compaign--form {
+    background-color: #F1F7F0;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+#campaignForm label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+#campaignForm input,
+#campaignForm textarea,
+#campaignForm select {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.4rem;
+    border-radius: 8px;
+    border: 1px solid #cddcca;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+#campaignForm input:focus,
+#campaignForm textarea:focus,
+#campaignForm select:focus {
+    border-color: #738A6E;
+    outline: none;
+}
+
+#campaignForm button {
+    margin-top: 2rem;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #738A6E;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#campaignForm button:hover {
+    background-color: #344C3D;
+}
+
+@media (max-width: 768px) {
+    .compaign {
+        flex-direction: column;
+    }
+
+    .add__compaign,
+    .add__compaign--form {
+        width: 100%;
+    }
+
+    .user__info {
+        left: 1.9em;
+        bottom: 1.3em;
+        text-align: center;
+        width: 100%;
+    }
+
+    #profile-img {
+        left: 18%;
+        transform: translateX(-50%);
+    }
+}

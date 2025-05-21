@@ -3,7 +3,7 @@ let totalUsers = document.getElementById("dashboard__totalUsers");
 let totalCmpaigns = document.getElementById("dashboard__totalCampains");
 let totalPledges = document.getElementById("dashboard__totalPledges");
 let totalUnimproved = document.getElementById("dashboard__totalUnimproved")
-
+let allCampaigns = [];
 
 let dashboardTable = document.getElementById("dashboardTable");
 let campainsTable = document.getElementById("campainsTable");
@@ -75,14 +75,14 @@ function displayCounters (){
     counter+=`<div class="col-md-3 ">
                                 <div class="my-3 text-center dashboard__box p-2 d-flex flex-column align-items-center">
                                     <i class="fa-solid fa-users m-2"></i>
-                                    <p class="mb-2" id="dashboard__totalUsers">40</p>
+                                    <p class="mb-2" id="dashboard__totalUsers">${allUsers.length}</p>
                                     <p class="mb-2">Total Users</p>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="my-3 text-center dashboard__box p-2 d-flex flex-column align-items-center">
                                     <i class="fas fa-bullhorn m-2"></i>
-                                    <p class="mb-2" id="dashboard__totalCampains">40</p>
+                                    <p class="mb-2" id="dashboard__totalCampains">${allCampaigns.length}</p>
                                     <p class="mb-2">Total Campains</p>
                                 </div>
                             </div>
@@ -128,7 +128,7 @@ function deleteUser(userId) {
 ////////////////////////////////////////////////////////////////////////////
 
 //fetch campaigns data
-let allCampaigns = [];
+
 async function getCampaigns(data) {
   try {
     let response = await fetch(`http://localhost:4000/campaigns`);
